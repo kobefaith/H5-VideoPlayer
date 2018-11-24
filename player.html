@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>前端播放m3u8格式视频</title>
+    <link rel="stylesheet" href="video-js.min.css">  
+    <script src="video.min.js"></script>
+    <script src="videojs-contrib-hlsjs.min.js"></script>
+</head>
+<body>
+    <video id="myVideo"  class="video-js" controls  width="1080" height="708" data-setup='{}'>    
+        <source id="source" src="http://112.25.6.156/9a6ddcb1ceca950836d7730933f8b68a.m3u8?k=d1f7911ebfff1e99d8f0f48cc6760810-347d-1543059709%26segment%3D5e3aba88_5e3a99a0_1543045309%26bppcataid%3D38&vvid=8DCF3F37-D2C0-4A3D-8A22-B5EB8CD4D0EB&type=msports"  type="application/x-mpegURL">
+    </video>    
+</body>
+<script>    
+    // videojs 简单使用
+    var myVideo = videojs('myVideo',{
+        bigPlayButton : true, 
+        textTrackDisplay : false, 
+        posterImage: false,
+        errorDisplay : false,
+    })
+    /* myVideo.play() // 视频播放
+    myVideo.pause() // 视频暂停 */
+</script>
+</html>
